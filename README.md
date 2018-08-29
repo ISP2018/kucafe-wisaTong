@@ -20,7 +20,7 @@ If your repository doesn't contain the "merges" described here you won't learn a
 
 ## Exercises
 
-> **Caution:**  You will be working on different branches. If you edit this README file on different branches, you will need to be careful.  It is easier to either a) edit README.md on master after you finish step 13, or b) edit a copy outside of the repo, then copy it back into `master` before final commit.
+> **Caution:**  You will be working on different branches. If you edit this README file on different branches, you will need to be careful.  It is easier to either a) edit README.md on master after you finish step 13, or b) edit a copy of README outside of the repo, then copy it back into `master` before final commit.
 
 1. Clone the repository from Github. Clone both `master` and `breakfast` branches as tracking branches.  There are a few ways to do this.
 
@@ -30,7 +30,7 @@ If your repository doesn't contain the "merges" described here you won't learn a
 > Can you view differences between branches visually using a GUI tool or Github?    
 > This is something to explore on your own.
 
-4. Create a feature branch off of master.  So, first switch to `master`. Then create a new branch named `dev-one-menu` and switch to it.  What is(are) the command(s) for that?
+4. Create a feature branch off of master for creating the new, unified menu.  First switch to `master`. Then create a new branch named `dev-one-menu` and switch to it.  What is(are) the command(s) for this?
 ```
 cmd>
 cmd>
@@ -43,7 +43,7 @@ cmd> git co master
 cmd> git co dev-one-menu
 ```
 
-6. Check the `menu.md` file. It should be exactly same as the file on master.  You want to combine this file with the `menu.md` in the "breakfast" branch, so try merging branch "breakfast" into this branch:
+6. Check the `menu.md` file. It should be exactly same as the file on master.  You want to combine this file with `menu.md` in the "breakfast" branch, so try merging branch "breakfast" into this branch:
 ```
 cmd> git merge breakfast
 ```
@@ -56,7 +56,7 @@ cmd> git reset --merge
 ```
 > There are two commands that work: `git reset --hard HEAD` and and `get reset --merge`. `reset --merge` keeps local changes that have not been commited or staged.  See [git help reset](https://git-scm.com/docs/git-reset).
 
-9. Do the merge again.  This time, we will "resolve" the conflicts.  After you merge, edit `menu.md` with a text editor to see what has changed.  There are several "diffs" in the file.
+9. Do the merge again.  This time, you will "resolve" the conflicts manually.  After you merge, edit `menu.md` with a text editor to see what has changed.  There are several "diffs" in the file.
 ```shell
 cmd> git merge breakfast
 cmd> edit menu.md  (use any text editor you like)
@@ -64,12 +64,12 @@ cmd> edit menu.md  (use any text editor you like)
 > As a programmer, you'll need a good text editor.  
 > Something better than the Windows Notepad or Wordpad.    
 > A visual "diff" tool is also useful (if your editor doesn't have one).    
-> Type `git mergetool` for list of merge tools that Git supports. I use `meld` and `diffuse`.
 > For code, Eclipse EGit has a good built-in merge tool.
 
 10. To manually "resolve" the conflicts in this file you can use an editor or a GUI merge tool.
     * The important thing is to know how to read the "diffs" in the file.  This is explained in class.
     * Demo how to merge conflicts in class.
+    * Instructor will use `git mergetool` for visual merging
 
 11. After you have successfully fixed the conflicts, you should test the result.
     * In a software project you would run *unit tests*. 

@@ -32,8 +32,8 @@ If your repository doesn't contain the "merges" described here you won't learn a
 
 4. Create a feature branch off of master for creating the new, unified menu.  First switch to `master`. Then create a new branch named `dev-one-menu` and switch to it.  What is(are) the command(s) for this?
 ```
-cmd>
-cmd>
+cmd> git branch dev-one-menu
+cmd> git checkout dev-one-menu
 ```
 
 5. (Optional) Are you tired of typing "git checkout xxxx"?  Create an alias "co" so you can just type "git co branchname" (Subersion has this alias):
